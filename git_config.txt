@@ -1,0 +1,9 @@
+Git Configuration
+-------------------------------
+ 
+System - git config --system
+
+User - git config --global
+ 
+Project - git config    
+
