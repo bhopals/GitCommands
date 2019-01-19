@@ -1,1 +1,2 @@
-This is my first git command file 
+This is my first git command file
+This is my second git command file  
