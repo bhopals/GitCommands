@@ -52,6 +52,7 @@ git checkout <sha> -- <filename.html>
 Git Reverting a commit
 -------------------------------------
 git revert <sha> of the commit
+  - This command creates a new commit that undoes the changes from a previous commit. This command adds new history to the project (it doesn't modify existing history).
 
 
 Git reset to undo many commits
@@ -69,3 +70,13 @@ Git reset provides three ways to do RESET
 	- Hard Rest  ( --hard ) : Changes staging index and working directory to match repository, which means our changes 
 	  are completely lost/gone.    
 	  Example: git reset --hard <SHA>
+
+
+Usuage of GIT REVERT/RESET/CHECOUT
+-----------------------------------------
+
+If a commit has been made somewhere in the project's history, and you later decide that the commit is wrong and should not have been done, then git revert is the tool for the job. It will undo the changes introduced by the bad commit, recording the "undo" in the history.
+
+If you have modified a file in your working tree, but haven't committed the change, then you can use git checkout to checkout a fresh-from-repository copy of the file.
+
+If you have made a commit, but haven't shared it with anyone else and you decide you don't want it, then you can use git reset to rewrite the history so that it looks as though you never made that commit.
