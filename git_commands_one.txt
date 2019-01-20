@@ -19,6 +19,7 @@ GIT - History
 In Git, changes are stored as "Change Sets" or "Patches" - Track changes, not versions, however CVS track versions
 Well suited for collaboration working style
 
+
 Git Configuration
 --------------------------------- 
 - System - git config --system
