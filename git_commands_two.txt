@@ -5,6 +5,16 @@ git diff --staged / --cached
 git diff --color-word <file-name> 
 git status
 
+git diff <SHA> ( it will show the difference between all the files of that commit and passed SHA)
+git diff <SHA> <filename> ( the difference of current file version and SHA file version ) 
+
+git diff <SHA4>..<SHA1> (shows the difference of both snapshots of all files)
+git diff <SHA3>..HEAD^^ 
+
+git diff --stat --summary <SHA5>..HEAD
+
+
+
 
 Git Delete
 -------------------------------
