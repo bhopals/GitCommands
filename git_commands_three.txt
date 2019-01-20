@@ -14,6 +14,7 @@ git rm --cached <filename>
 To track Empty directorires that by defualt GIT does not track until we have any file in it, we could create ".gitkeep" file in the directory and it would be tracked.
 
 
+
 Navigating the Commit Tree
 --------------------------------------
 

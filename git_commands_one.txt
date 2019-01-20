@@ -73,7 +73,6 @@ git show <SHA>  ( will show complete change set of the commit)
 git show --format=oneline HEAD~1
 
 
-
 Git HELP
 -----------------------------
 git status --help ( Open GIT documentation)
