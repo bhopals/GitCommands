@@ -12,3 +12,32 @@ git rm --cached <filename>
 
 
 To track Empty directorires that by defualt GIT does not track until we have any file in it, we could create ".gitkeep" file in the directory and it would be tracked.
+
+
+Navigating the Commit Tree
+--------------------------------------
+
+Tree-ish - is a reference to a commit
+
+  - To Refer PARENT commit we can use
+ 	HEAD^, <SHA>^, master^ OR HEAD ~1, HEAD ~
+  - To Refer GRAND PARENT commit we can use
+ 	HEAD^^, <SHA>^^, master^^ OR HEAD ~2
+  - To Refer GREAT GRAND PARENT commit we can use
+ 	HEAD^^^, <SHA>^^^, master^^^ OR HEAD ~3
+
+
+Explore TREE Listings
+-------------------------------------
+git ls-tree master
+git ls-tree HEAD
+
+git ls-tree master^
+git ls-tree HEAD^
+
+git ls-tree master^^
+git ls-tree HEAD^^
+
+
+Compare Commits
+------------------------------------

@@ -48,9 +48,30 @@ Git Log
 ------------------------------------
 Git log -n 1 - Will show last 1 commit
 Git log --until=2012-11-11
-Git log --since=2018-11-11   
+Git log --since=2018-11-11
+Git log --until="2 days ago"   
 Git log --author="kevin"
 Git log --grep="<Commit Messages>"
+
+git log --oneline
+git log --oneline -3
+git log --oneline -5
+
+git log --format= oneline/short/medium/fuller/email/graph ( pass any given option with FORMAT and the returned output would be in specific formata as ther the parameter passed)
+
+git log --oneline --graph --all --decorate 
+
+git log <SHA5>..<SHA2> --oneline  (It will display all the commits from 5th to 2nd commit)
+git log <SHA4>.. index.html  ( will show all the commits on the file after give <SHA> commit)
+
+git log -p (More details commit as it will show the content as well)
+git log --stat --summary ( Along with each commit, shows the no. of files added/updated/deleted)
+
+
+
+git show <SHA>  ( will show complete change set of the commit)
+git show --format=oneline HEAD~1
+
 
 
 Git HELP
