@@ -1,0 +1,20 @@
+Making changes to files
+---------------------------------
+git diff
+git diff --staged / --cached
+git status
+
+
+Git Delete
+-------------------------------
+git rm <file-name>
+
+
+Git Moving and Renaming file
+-------------------------------
+git add <new file name>
+git rm <old file name>
+git status ( it would show that file is renamed from old file name --> new file name)
+
+
+

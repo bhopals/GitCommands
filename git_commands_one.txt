@@ -1,5 +1,5 @@
 GIT
------------------------------	
+-------------------------------	
 VCS - Version Control System
 Source Code Management ( SCM)
 
@@ -30,8 +30,10 @@ Create a new repository on the command line
 ---------------------------------
 echo "# GitCommands" >> README.md
 git init
-git add README.md
-git commit -m "first commit"
+git add .
+git add README.md (ADD File)
+git commit -m "first commit" (Commit File)
+git commit -a -m "first commit" (Add File + Commit File)
 git remote add origin https://github.com/bhopals/GitCommands.git
 git push -u origin master
 
@@ -48,6 +50,12 @@ Git log --until=2012-11-11
 Git log --since=2018-11-11   
 Git log --author="kevin"
 Git log --grep="<Commit Messages>"
+
+
+Git HELP
+-----------------------------
+git status --help ( Open GIT documentation)
+git status -h (List out possible commands in command prompt itself)
 
 
 Git Concepts and Architecture
