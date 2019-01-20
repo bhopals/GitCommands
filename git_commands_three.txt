@@ -1,3 +1,14 @@
 
 Git Ignore File
 -----------------------------------
+https://github.com/github/gitignore
+	- Just select the type of the LANGUAGE, this would provide you the .gitingnore file initial version for that.
+
+To Add global .gitignore file ( user specific instead of repository specific)
+git config --global core.excludesfiles ~./gitignore_global
+
+git rm --cached <filename> 
+	TO ignore tracked file, means we want to delete the tracked file but still want to retain the copy of it.
+
+
+To track Empty directorires that by defualt GIT does not track until we have any file in it, we could create ".gitkeep" file in the directory and it would be tracked.
