@@ -2,6 +2,7 @@ Making changes to files
 ---------------------------------
 git diff
 git diff --staged / --cached
+git diff --color-word <file-name> 
 git status
 
 
@@ -16,5 +17,16 @@ git add <new file name>
 git rm <old file name>
 git status ( it would show that file is renamed from old file name --> new file name)
 
+git mv <filename>  <newfilename> 
+git status ( it would show that file is renamed from old file name --> new file name)
 
+
+
+Undoing Changes
+----------------------------------
+git checkout (to checkout the branch)
+git checkout <filename> ( to download the remote version of the file)
+
+But what if we have the same file name and branch name
+In that case : git checkout -- index.html ( -- make sure that the checkout is for the file not for the branch)
 

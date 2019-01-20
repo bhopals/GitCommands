@@ -34,6 +34,7 @@ git add .
 git add README.md (ADD File)
 git commit -m "first commit" (Commit File)
 git commit -a -m "first commit" (Add File + Commit File)
+git commit -am "first commit" (Add File + Commit File)
 git remote add origin https://github.com/bhopals/GitCommands.git
 git push -u origin master
 
