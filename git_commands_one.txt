@@ -51,6 +51,12 @@ Git log --author="kevin"
 Git log --grep="<Commit Messages>"
 
 
+Git HELP
+-----------------------------
+git status --help ( Open GIT documentation)
+git status -h (List out possible commands in command prompt itself)
+
+
 Git Concepts and Architecture
 --------------------------------------- 
 - Three-tree Architecture  ( Repository --> Staging Index --> Working)
