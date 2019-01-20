@@ -34,6 +34,7 @@ git add .
 git add README.md (ADD File)
 git commit -m "first commit" (Commit File)
 git commit -a -m "first commit" (Add File + Commit File)
+git commit -am "first commit" (Add File + Commit File)
 git remote add origin https://github.com/bhopals/GitCommands.git
 git push -u origin master
 
@@ -71,3 +72,12 @@ Git Concepts and Architecture
 - GIT maintains a reference variable called HEAD (which is just a pointer0) to reference a point to specific commit. 
 	(Tip of the current branch of repository)
 
+
+
+Removed Untracked files from Working Directory
+------------------------------------------------
+git clean -n  (it will show the listing of the files to be removed, but not remove)
+git clean -f  ( it will remove the files and show removed files listing, but not directory)
+git clean  -d  ( remove whole directory)
+git clean -q  ( remove files without showing any logs)
+ 
