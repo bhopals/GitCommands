@@ -1,0 +1,51 @@
+GIT
+-----------------------------	
+VCS - Version Control System
+Source Code Management ( SCM)
+
+
+GIT - History
+--------------------------------
+- Source Code control System(SCSS)
+- Revision Control System (RCS)
+- Concurrent Versions System(CVS) 
+- Apache SubVersion (SVN)
+
+*ALL Above are Central code repository modal OR Central Version System (CVS)
+- BitKeeper SCM - distributed version control
+- GIT - April 2005-Replacement for BitKeeper to manage Linux kernel source code
+
+
+In Git, changes are stored as "Change Sets" or "Patches" - Track changes, not versions, however CVS track versions
+Well suited for collaboration working style
+
+Git Configuration
+--------------------------------- 
+- System - git config --system
+- User - git config --global
+- Project - git config    
+
+
+
+Git Log 
+------------------------------------
+Git log -n 1 - Will show last 1 commit
+Git log --until=2012-11-11
+Git log --since=2018-11-11   
+Git log --author="kevin"
+Git log --grep="<Commit Messages>"
+
+
+Git Concepts and Architecture
+--------------------------------------- 
+- Three-tree Architecture  ( Repository --> Staging Index --> Working)
+- Git stores the changes in "Change Sets" / "Snapshots"
+- Git generates a checksum for each change set
+- Checksum algorithms convert data(all the committed files) into a simple number so same data always equals same checksum
+- Data integrity is fundamental
+- Git uses SHA-1 hash algorith to creak checksums (40 characters heaxadecimal string)
+- Apart from CHECKSUM information, each commit also stores some meta information that contains PARENT Checksum, author, 
+	message, time etc
+- GIT maintains a reference variable called HEAD (which is just a pointer0) to reference a point to specific commit. 
+	(Tip of the current branch of repository)
+
