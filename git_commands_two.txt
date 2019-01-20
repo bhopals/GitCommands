@@ -30,3 +30,42 @@ git checkout <filename> ( to download the remote version of the file)
 But what if we have the same file name and branch name
 In that case : git checkout -- index.html ( -- make sure that the checkout is for the file not for the branch)
 
+
+Reset Stage Changes
+----------------------------------
+git reset HEAD <filename> ( To unstage specific file)
+git reset HEAD  ( To unstage all staged files)
+
+
+Git Amend
+-------------------------------------
+git commit --amend -m "Amended message"
+
+
+Git Checkout specific commit
+---------------------------------------
+git checkout <sha> -- <filename.html>  
+	Here "--" to denote that we are not checking out BRANCH, this is for FILE checkout. The passed
+	<SHA> can be min 10 digits of SHA key.
+
+
+Git Reverting a commit
+-------------------------------------
+git revert <sha> of the commit
+
+
+Git reset to undo many commits
+------------------------------------
+It rewind back to previous commit and it always move the HEAD pointer.
+Git reset provides three ways to do RESET 
+	
+	- Soft Reset ( --soft ) : does not change STAGING and WORKING Directory
+	  Example: git reset --soft <SHA>
+
+	- Mixed Rest ( --mixed ) :This is the default one and it Changes STAGING index to match repository; however, does not change  
+	  working directory, which means our changes are not staged but not lost either.
+	  Example: git reset --mixed <SHA>
+
+	- Hard Rest  ( --hard ) : Changes staging index and working directory to match repository, which means our changes 
+	  are completely lost/gone.    
+	  Example: git reset --hard <SHA>
