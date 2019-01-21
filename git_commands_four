@@ -66,4 +66,18 @@ Strategies to reduce conflicts
  - Track changes to master ( merge Master changes to feature to keep that in SYNC)
 
 
+ Git Stash
+ ---------------------------------------------------
+ git stash save "MESSAGE"
+ git stash list (to list all the stashes)
+ git stash show "<STASHID>" ( show stashed chanegs - SUMMARY)
+ git stash show -p "<STASHID>" ( show stashed chanegs - Detailed)
+ git stash apply  ( Just apply the top most STASH to the current branch)
+ git stash pop ( Apply the topmost stash to current branch and remove "STASHED" changes from STASH)
+
+ git pop "<STASHID>"
+ git staths "<STASHID>"
+
+ git stash drop "<STASHID>"  ( to delete Stored STASH)
+ git stash clear (This command will Clear all the stashed items)
  
