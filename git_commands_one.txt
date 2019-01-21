@@ -4,6 +4,28 @@ VCS - Version Control System
 Source Code Management ( SCM)
 
 
+In Git, changes are stored as "Change Sets" or "Patches" - Track changes, not versions, however CVS track versions
+Well suited for collaboration working style
+
+
+Git Concepts and Architecture
+-----------------------------------------
+ - Three-tree Architecture  ( Repository --> Staging Index --> Working)
+ - Git stores the changes in "Change Sets" / "Snapshots"
+ - Git generates a checksum for each change set
+ - Checksum algorithms convert data(all the committed files) into a simple number so same data always equals same checksum
+ - Data integrity is fundamental
+ - Git uses SHA-1 hash algorith to creak checksums (40 characters heaxadecimal string)
+ - Apart from CHECKSUM information, each commit also stores some meta information that contains PARENT Checksum, 
+ 	author, message, time etc
+ - GIT maintains a reference variable called HEAD (which is just a pointer0) to reference a point to specific commit. 
+ 	( Tip of the current branch of repository)
+
+
+In Git, changes are stored as "Change Sets" or "Patches" - Track changes, not versions, however CVS track versions
+Well suited for collaboration working style
+
+
 GIT - History
 --------------------------------
 - Source Code control System(SCSS)
