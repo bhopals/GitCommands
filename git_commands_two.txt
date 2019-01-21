@@ -16,6 +16,7 @@ git diff --stat --summary <SHA5>..HEAD
 
 
 
+
 Git Delete
 -------------------------------
 git rm <file-name>
