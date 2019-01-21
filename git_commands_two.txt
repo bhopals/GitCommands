@@ -1,5 +1,5 @@
-Making changes to files
----------------------------------
+Making changes to files / Comparing the changes
+----------------------------------
 git diff
 git diff --staged / --cached
 git diff --color-word <file-name> 
@@ -12,8 +12,6 @@ git diff <SHA4>..<SHA1> (shows the difference of both snapshots of all files)
 git diff <SHA3>..HEAD^^ 
 
 git diff --stat --summary <SHA5>..HEAD
-
-
 
 
 
