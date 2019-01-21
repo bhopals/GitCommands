@@ -1,4 +1,4 @@
-Git Branchings - 
+Git Branchings 
 --------------------------------------
 Note : In .git folder, HEAD would always contain currently checkedout branch Reference .git/HEADS
 	   Also, .git\refs\heads contains HEAD of all created branches on that repository 	
@@ -13,3 +13,32 @@ git checkout -b <new_branch_name>  ( it will create a new branch and checkout th
 
 
 if you do git checkout and there are any changes on any of the existing file then GIT will not let you checkout any branch until you revert/stash/commit those changes; however, if any file that is newly added then GIT will not complain and it would simply let you checkout any other branch.
+
+
+Comparing Branches
+---------------------------------------------
+git diff <onebranch>..<secondbranch> (After and before ".." not even we can pass any branch name, but also we can pass any tree-ish, sha, head details )
+git diff master..new_feature^
+
+git diff master..new_feature (Changes would be displayed in separate line)
+
+git diff --color-words new_feature..master (Changes would be displayed in ONE line )
+
+
+git branch --merged would display all the branches whose code is already merged with current branch or already contains the code from these branches. Example if our currenct branch is "new_feature" and git branch --merged returns "master, develop, shot_title" branches that means this branch does have all the tip of HEAD's/code of other listed branches.
+
+Renaming Branches
+---------------------------------------------------------
+git branch -m/--move <current_branch_name> <new_branch_name>
+
+git branch -m new_feature seo_title
+
+Deleting branches
+------------------------------------------------------------
+git branch -d <branch_name_to_be_deleted>   ( Only delete if the branch is fully merged, else will throw an error while deletion)
+git branch -D <branch_name_to_be_deleted>   ( Delete the branch irrespective of it's merge status)
+
+
+Merging Code
+-------------------------------------------------------------
+
