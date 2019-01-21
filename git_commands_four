@@ -1,0 +1,15 @@
+Git Branchings - 
+--------------------------------------
+Note : In .git folder, HEAD would always contain currently checkedout branch Reference .git/HEADS
+	   Also, .git\refs\heads contains HEAD of all created branches on that repository 	
+
+Git branching provides faster Context Switching
+
+git branch  ( To list out all the branches)
+git branch <new_branch_name> ( to create new branch)
+
+The shorhand of creation of the branch and checking out at the same time is use"-b" while checkout
+git checkout -b <new_branch_name>  ( it will create a new branch and checkout the same ) 
+
+
+if you do git checkout and there are any changes on any of the existing file then GIT will not let you checkout any branch until you revert/stash/commit those changes; however, if any file that is newly added then GIT will not complain and it would simply let you checkout any other branch.
