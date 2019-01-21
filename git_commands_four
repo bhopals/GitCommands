@@ -41,4 +41,29 @@ git branch -D <branch_name_to_be_deleted>   ( Delete the branch irrespective of 
 
 Merging Code
 -------------------------------------------------------------
+Checkout the target directory on which you want to perform merge and then
+git merge <source_branch_name>
 
+
+real-merge : Merge made 'recursive strategy'
+
+fast-forward merge : If the target branch has no commit since the source branch checkout then git simply perform the FAST-FORWARD approach while merging both of these branches. In this case there is no separate commit been made on the MASTER branch. To avoid fast forwarding we can used command "git merge --no--ff <branch_name>". So it forces git to make a new commit of a MERGE.
+
+The other options are :
+git merge --ff--only <branch_name> ( Here we are telling git that only merge if branch can be merged by FAST Forwarding, else abort the process)
+
+In GIT merge there are three actions we can take
+1. Abort merge : git merge --abort
+2. Resolve the conflicts manually : resolve conflicts, and git add <conflict files>, then git commit
+3. Use a merge tool : git mergetool --tools
+
+Strategies to reduce conflicts
+--------------------------------------------------
+ - Keep lines short
+ - Keep your commit small and focused
+ - Beware stray edits to whitespace ( Spaces, Tabs, line returns)
+ - Merge Often
+ - Track changes to master ( merge Master changes to feature to keep that in SYNC)
+
+
+ 

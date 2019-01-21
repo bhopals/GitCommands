@@ -68,6 +68,9 @@ git log -p (More details commit as it will show the content as well)
 git log --stat --summary ( Along with each commit, shows the no. of files added/updated/deleted)
 
 
+git log --oneline ( Same branch logs )
+git log <branch_name> --oneline (Different Branch logs without checking out that specific branch)
+
 
 git show <SHA>  ( will show complete change set of the commit)
 git show --format=oneline HEAD~1
