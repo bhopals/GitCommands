@@ -1,0 +1,91 @@
+Making changes to files / Comparing the changes
+----------------------------------
+git diff
+git diff --staged / --cached
+git diff --color-word <file-name> 
+git status
+
+git diff <SHA> ( it will show the difference between all the files of that commit and passed SHA)
+git diff <SHA> <filename> ( the difference of current file version and SHA file version ) 
+
+git diff <SHA4>..<SHA1> (shows the difference of both snapshots of all files)
+git diff <SHA3>..HEAD^^ 
+
+git diff --stat --summary <SHA5>..HEAD
+
+
+
+Git Delete
+-------------------------------
+git rm <file-name>
+
+
+Git Moving and Renaming file
+-------------------------------
+git add <new file name>
+git rm <old file name>
+git status ( it would show that file is renamed from old file name --> new file name)
+
+git mv <filename>  <newfilename> 
+git status ( it would show that file is renamed from old file name --> new file name)
+
+
+
+Undoing Changes
+----------------------------------
+git checkout (to checkout the branch)
+git checkout <filename> ( to download the remote version of the file)
+
+But what if we have the same file name and branch name
+In that case : git checkout -- index.html ( -- make sure that the checkout is for the file not for the branch)
+
+
+Reset Stage Changes
+----------------------------------
+git reset HEAD <filename> ( To unstage specific file)
+git reset HEAD  ( To unstage all staged files)
+
+
+Git Amend
+-------------------------------------
+git commit --amend -m "Amended message"
+
+
+Git Checkout specific commit
+---------------------------------------
+git checkout <sha> -- <filename.html>  
+	Here "--" to denote that we are not checking out BRANCH, this is for FILE checkout. The passed
+	<SHA> can be min 10 digits of SHA key.
+
+
+Git Reverting a commit
+-------------------------------------
+git revert <sha> of the commit
+  - This command creates a new commit that undoes the changes from a previous commit. This command adds new history to the project (it doesn't modify existing history).
+
+
+Git reset to undo many commits
+------------------------------------
+It rewind back to previous commit and it always move the HEAD pointer.
+Git reset provides three ways to do RESET 
+	
+	- Soft Reset ( --soft ) : does not change STAGING and WORKING Directory
+	  Example: git reset --soft <SHA>
+
+	- Mixed Rest ( --mixed ) :This is the default one and it Changes STAGING index to match repository; however, does not change  
+	  working directory, which means our changes are not staged but not lost either.
+	  Example: git reset --mixed <SHA>
+
+	- Hard Rest  ( --hard ) : Changes staging index and working directory to match repository, which means our changes 
+	  are completely lost/gone.    
+	  Example: git reset --hard <SHA>
+
+
+Usuage of GIT REVERT/RESET/CHECOUT
+-----------------------------------------
+
+If a commit has been made somewhere in the project's history, and you later decide that the commit is wrong and should not have been done, then git revert is the tool for the job. It will undo the changes introduced by the bad commit, recording the "undo" in the history.
+
+If you have modified a file in your working tree, but haven't committed the change, then you can use git checkout to checkout a fresh-from-repository copy of the file.
+
+If you have made a commit, but haven't shared it with anyone else and you decide you don't want it, then you can use git reset to rewrite the history so that it looks as though you never made that commit.

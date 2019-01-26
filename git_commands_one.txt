@@ -1,7 +1,29 @@
 GIT
------------------------------	
+-------------------------------	
 VCS - Version Control System
 Source Code Management ( SCM)
+
+
+In Git, changes are stored as "Change Sets" or "Patches" - Track changes, not versions, however CVS track versions
+Well suited for collaboration working style
+
+
+Git Concepts and Architecture
+-----------------------------------------
+ - Three-tree Architecture  ( Repository --> Staging Index --> Working)
+ - Git stores the changes in "Change Sets" / "Snapshots"
+ - Git generates a checksum for each change set
+ - Checksum algorithms convert data(all the committed files) into a simple number so same data always equals same checksum
+ - Data integrity is fundamental
+ - Git uses SHA-1 hash algorith to creak checksums (40 characters heaxadecimal string)
+ - Apart from CHECKSUM information, each commit also stores some meta information that contains PARENT Checksum, 
+ 	author, message, time etc
+ - GIT maintains a reference variable called HEAD (which is just a pointer0) to reference a point to specific commit. 
+ 	( Tip of the current branch of repository)
+
+
+In Git, changes are stored as "Change Sets" or "Patches" - Track changes, not versions, however CVS track versions
+Well suited for collaboration working style
 
 
 GIT - History
@@ -26,15 +48,63 @@ Git Configuration
 - User - git config --global
 - Project - git config    
 
+Create a new repository on the command line
+---------------------------------
+echo "# GitCommands" >> README.md
+git init
+git add .
+git add README.md (ADD File)
+git commit -m "first commit" (Commit File)
+git commit -a -m "first commit" (Add File + Commit File)
+git commit -am "first commit" (Add File + Commit File)
+git remote add origin https://github.com/bhopals/GitCommands.git
+git push -u origin master
+
+Push an existing repository from the command line
+------------------------------------
+git remote add origin https://github.com/bhopals/GitCommands.git
+git push -u origin master
 
 
 Git Log 
 ------------------------------------
 Git log -n 1 - Will show last 1 commit
 Git log --until=2012-11-11
-Git log --since=2018-11-11   
+Git log --since=2018-11-11
+Git log --until="2 days ago"   
 Git log --author="kevin"
 Git log --grep="<Commit Messages>"
+
+git log --oneline
+git log --oneline -3
+git log --oneline -5
+
+git log --format= oneline/short/medium/fuller/email/graph ( pass any given option with FORMAT and the returned output would be in specific formata as ther the parameter passed)
+
+git log --oneline --graph --all --decorate 
+
+git log <SHA5>..<SHA2> --oneline  (It will display all the commits from 5th to 2nd commit)
+git log <SHA4>.. index.html  ( will show all the commits on the file after give <SHA> commit)
+
+git log -p (More details commit as it will show the content as well)
+git log --stat --summary ( Along with each commit, shows the no. of files added/updated/deleted)
+
+git log --oneline ( Same branch logs )
+git log <branch_name> --oneline (Different Branch logs without checking out that specific branch)
+
+git show <SHA>  ( will show complete change set of the commit)
+git show --format=oneline HEAD~1
+
+TO see the changes being done on remote branch without merge
+git fetch
+git log -p <local_branch_name>...origin/remote_branch_name ( it will list out line by line changes/addition of the code)
+If all looks good then "git merge origin/feedback_form" and we are done.
+
+
+Git HELP
+-----------------------------
+git status --help ( Open GIT documentation)
+git status -h (List out possible commands in command prompt itself)
 
 
 Git Concepts and Architecture
@@ -50,3 +120,12 @@ Git Concepts and Architecture
 - GIT maintains a reference variable called HEAD (which is just a pointer0) to reference a point to specific commit. 
 	(Tip of the current branch of repository)
 
+
+
+Removed Untracked files from Working Directory
+------------------------------------------------
+git clean -n  (it will show the listing of the files to be removed, but not remove)
+git clean -f  ( it will remove the files and show removed files listing, but not directory)
+git clean  -d  ( remove whole directory)
+git clean -q  ( remove files without showing any logs)
+ 
